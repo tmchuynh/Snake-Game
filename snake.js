@@ -34,18 +34,11 @@ gen_food();
 
 document.addEventListener("keydown", change_direction);
 
-function restart() {
-    drawSnake();
-    gen_food();
-}
-
 // main function called repeatedly to keep the game running
 function main() {
 
     if (has_game_ended()) {
-        play_again.addEventListener("click", function() {
-            restart();
-        })
+        return;
     };
 
     changing_direction = false;
